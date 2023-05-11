@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 1394826499
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 6b99b86113e2b32c6eb1804c1d2b4b97
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 7e9ee104d6bb707fb2602b751e6f78b1
+HashAppended: 0
+ClassTypes:
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- Packages/io.extendreality.vrtk.prefabs/SharedResources/Shaders/Unlit_TransparentColor.shader
+- Packages/io.extendreality.vrtk.prefabs/SharedResources/Shaders/Outline_Color.shader
+Dependencies: []

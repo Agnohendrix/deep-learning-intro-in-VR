@@ -1,0 +1,26 @@
+ManifestFileVersion: 0
+CRC: 523708726
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: be148fc657e503790ff74e2a031cca98
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: f19fbf085e00d23fbc8d6cf7b345590b
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Models/Crates00/Textures/Prop_Crate00_norm.tga
+- Assets/Models/Crates00/Textures/Prop_Crate03_norm.tga
+- Assets/Models/Crates00/Textures/Prop_Crate02_diff.tga
+- Assets/Models/Crates00/Textures/Prop_Crate01_diff.tga
+- Assets/Models/Crates00/Textures/Prop_Crate03_diff.tga
+- Assets/Models/Crates00/Textures/Prop_Crate04_norm.tga
+- Assets/Models/Crates00/Textures/Prop_Crate01_norm.tga
+- Assets/Models/Crates00/Textures/Prop_Crate00_diff.tga
+- Assets/Models/Crates00/Textures/Prop_Crate02_norm.tga
+- Assets/Models/Crates00/Textures/Prop_Crate04_diff.tga
+- Assets/Oculus/VR/Textures/OculusTouchForQuestAndRiftS/OculusQuestTouchControllerTexture.tga
+Dependencies: []

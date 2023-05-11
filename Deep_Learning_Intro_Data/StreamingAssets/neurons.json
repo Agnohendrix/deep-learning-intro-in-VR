@@ -1,0 +1,34 @@
+{
+  "data": [
+    {
+      "questiontext": "When is the bias added in a neuron?",
+      "answers": [ "After summation", "After the activation function", "Before the activation function", "Before summation" ],
+      "correctanswers": [ 0, 2 ]
+    },
+    {
+      "questiontext": "What is the calculation of an output neuron in the output layer in a NN based on?",
+      "answers": [ "Training input to the network", "Weights from the previous to the output layer", "Bias", "Activation of nodes in previous layer" ],
+      "correctanswers": [ 1, 2, 3 ]
+    },
+    {
+      "questiontext": "What is the output of the perceptron after applying the activation function to this: \n z = w * x + b = 1.714?",
+      "answers": [ "0.8474", "- 0.8474", "0", "1" ],
+      "correctanswers": [ 3 ]
+    },
+    {
+      "questiontext": "What is the advantage of using a Sigmoid neuron in a neural network?",
+      "answers": [ "It can accept a higher amount of inputs", "The activation function is non-linear", "It enables a wider range of output values", "The summation and bias is calculated in a more meaningful way" ],
+      "correctanswers": [ 2 ]
+    },
+    {
+      "questiontext": "How does a neural network improve accuracy?",
+      "answers": [ "By automatically making small changes in weights and biases", "By developers manually adjusting weights and biases", "By applying larger sets of training data", "By spending less time on training and more time on testing" ],
+      "correctanswers": [ 0, 2 ]
+    },
+    {
+      "questiontext": "Why can perceptrons cause difficulties when learning?",
+      "answers": [ "Small changes made to improve accuracy for some inputs may cause unexpected results for others", "They aren't bad for learning", "The range of output values is too small", "The range of output values is too large" ],
+      "correctanswers": [ 0, 2 ]
+    }
+  ]
+}

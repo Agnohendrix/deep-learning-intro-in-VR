@@ -1,0 +1,25 @@
+ManifestFileVersion: 0
+CRC: 927275323
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 4a21b22fe823a5f148df37cd6c267374
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: e9ff7947e86ac18259f8d8c6c35c7861
+HashAppended: 0
+ClassTypes:
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 115
+  Script: {instanceID: 0}
+Assets:
+- Assets/Animations/DoorSlideClose.anim
+- Assets/Animations/Credits.anim
+- Assets/Animations/RaiseButtonPoles.anim
+- Assets/Animations/LowerButtonPoles.anim
+- Assets/Animations/DoorSlideOpen.anim
+- Assets/Models/OVR-custom/Controller/Glowing.anim
+- Assets/Animations/ShelfClose.anim
+- Assets/Animations/ShelfOpen.anim
+Dependencies: []

@@ -1,0 +1,23 @@
+ManifestFileVersion: 0
+CRC: 1380359351
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 4ea6c42fc425a60c11034839ce8c9a0a
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 7d60d1eb4c7e99bf6d119c16dc6d5ab4
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 128
+  Script: {instanceID: 0}
+Assets:
+- Assets/TextMesh Pro/Fonts/LiberationSans.ttf
+- Assets/TextMesh Pro/Examples & Extras/Fonts/Electronic Highway Sign.TTF
+Dependencies: []

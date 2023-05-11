@@ -1,0 +1,39 @@
+ManifestFileVersion: 0
+CRC: 1951702485
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: a0bbf38266f535745d2d2c1017578c50
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ea5a42e0fd8ea905efa7aa926a3b8944
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/Models/SpaceZeta_Spotlight/Assets/Materials/Spotlight_rough.png
+- Assets/Models/SpaceZeta_Spotlight/Assets/Materials/Spotlight_normal.png
+- Assets/Models/SpaceZeta_Spotlight/Assets/Materials/Spotlight.png
+- Assets/Models/Lamps/Textures/wall_lamp3_diffuse.png
+- Assets/Scenes/Room1/Lightmap-8_comp_dir.png
+- Assets/EscapeRoom/VRTK_Farm/Prefabs/DestinationLocations/DestinationPoint/Textures/FadedGradient.png
+- Assets/Oculus/SampleFramework/Core/DebugUI/Textures/panel_background.PNG
+- Assets/EscapeRoom/Textures/T_pinlock_AlbedoTransparency.png
+- Assets/Scenes/Room1/Lightmap-1_comp_dir.png
+- Assets/Models/SpaceZeta_Spotlight/Assets/Materials/Spotlight_emission.png
+- Assets/Textures pack/textures/brick_3_AlbedoTransparency.png
+- Assets/Scenes/Room1/Lightmap-5_comp_dir.png
+- Assets/Models/Lamps/Textures/standing_lamp1_diffuse.png
+- Assets/Scenes/Room1/Lightmap-4_comp_dir.png
+- Assets/Scenes/Room1/Lightmap-9_comp_dir.png
+- Assets/Scenes/Room1/Lightmap-0_comp_dir.png
+- Assets/EscapeRoom/Textures/T_pinlock_Normal.png
+- Assets/Scenes/Room1/Lightmap-2_comp_dir.png
+- Assets/Scenes/Room1/Lightmap-3_comp_dir.png
+- Assets/Scenes/Room1/Lightmap-7_comp_dir.png
+- Assets/EscapeRoom/Textures/T_pinlock_MetallicSmoothness.png
+- Assets/Scenes/Room1/Lightmap-6_comp_dir.png
+Dependencies: []

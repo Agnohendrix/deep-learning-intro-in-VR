@@ -1,0 +1,52 @@
+ManifestFileVersion: 0
+CRC: 1701411474
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: eee8b6279601ee44e3f91360121ead8d
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: fe397485c3cec1106b49e9ff95e8f8a2
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- Assets/Models/Crates00/Meshes/Materials/crate03.mat
+- Packages/io.extendreality.vrtk.prefabs/Pointers/SharedResources/Materials/PointerDefaultValid.mat
+- Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Materials/DeepBlue_snaps001.mat
+- Assets/Models/Crates00/Meshes/Materials/crate04.mat
+- Assets/Materials/Metal grey.mat
+- Assets/EscapeRoom/Materials/Blue.mat
+- Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Materials/Brown_snaps001.mat
+- Assets/Materials/Light Grey.mat
+- Assets/EscapeRoom/VRTK_Farm/Prefabs/DestinationLocations/DestinationPoint/Materials/LockedGlow.mat
+- Assets/Materials/Metal gold.mat
+- Packages/io.extendreality.vrtk.prefabs/Locomotion/DestinationLocations/SharedResources/Materials/InactiveLocation.mat
+- Assets/Models/Lamps/Meshes/Materials/standing_lamp1.mat
+- Assets/Models/SpaceZeta_Spotlight/Assets/Materials/Spotlight.mat
+- Assets/Materials/Metal bronze.mat
+- Assets/EscapeRoom/Materials/SnapMaterial.mat
+- Assets/EscapeRoom/Materials/Red.mat
+- Assets/Materials/Black.mat
+- Packages/io.extendreality.vrtk.prefabs/Locomotion/DestinationLocations/SharedResources/Materials/LockedHoverLocation.mat
+- Assets/EscapeRoom/Materials/Elements/pinlock.mat
+- Assets/EscapeRoom/VRTK_Farm/Prefabs/DestinationLocations/DestinationPoint/Materials/InactiveBase.mat
+- Packages/io.extendreality.vrtk.prefabs/Locomotion/DestinationLocations/SharedResources/Materials/HoverLocation.mat
+- Assets/Materials/brick_3_AlbedoTransparency.mat
+- Assets/Oculus/SampleFramework/Core/CustomHands/Materials/Hands_solid.mat
+- Packages/io.extendreality.vrtk.prefabs/Pointers/SharedResources/Materials/PointerDefaultInvalid.mat
+- Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Materials/DarkGray_snaps001.mat
+- Assets/EscapeRoom/VRTK_Farm/Prefabs/DestinationLocations/DestinationPoint/Materials/ActiveGlow.mat
+- Assets/Materials/Highlight.mat
+- Packages/io.extendreality.vrtk.prefabs/Locomotion/DestinationLocations/SharedResources/Materials/LockedInactiveLocation.mat
+- Assets/EscapeRoom/VRTK_Farm/Prefabs/DestinationLocations/DestinationPoint/Materials/LockedBase.mat
+- Assets/Models/Lamps/Meshes/Materials/wall_lamp3.mat
+Dependencies:
+- C:/Users/Agno/Universita/Tesi/deep-learning-intro-in-VR/OVRAssetBundles/OVRMasterBundle/asset_png0
+- C:/Users/Agno/Universita/Tesi/deep-learning-intro-in-VR/OVRAssetBundles/OVRMasterBundle/asset_shader0
+- C:/Users/Agno/Universita/Tesi/deep-learning-intro-in-VR/OVRAssetBundles/OVRMasterBundle/asset_tga0

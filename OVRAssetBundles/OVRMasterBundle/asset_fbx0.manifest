@@ -1,0 +1,72 @@
+ManifestFileVersion: 0
+CRC: 90904013
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 1c222769136ddcfc9c3c63fa6527e626
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 77da83e0ccec3535a80e51f4911976eb
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 137
+  Script: {instanceID: 0}
+Assets:
+- Assets/Models/Crates00/Meshes/Prop_Crate03.FBX
+- Assets/Models/Crates00/Meshes/Prop_Crate01.FBX
+- Assets/Oculus/SampleFramework/Core/CustomHands/Models/l_hand_skeletal_lowres.fbx
+- Assets/Oculus/SampleFramework/Core/CustomHands/Models/r_hand_skeletal_lowres.fbx
+- Assets/Models/Lamps/Meshes/wall_lamp3.fbx
+- Assets/Oculus/SampleFramework/Core/CustomHands/Animations/l_hand_thumbs_up_anim.fbx
+- Assets/Oculus/VR/Meshes/OculusTouchForQuestAndRiftS/OculusTouchForQuestAndRiftS_Right.fbx
+- Assets/Oculus/SampleFramework/Core/CustomHands/Animations/l_hand_relax_mid_fist_anim.fbx
+- Assets/Oculus/SampleFramework/Core/CustomHands/Animations/r_hand_point_anim.fbx
+- Assets/Oculus/SampleFramework/Core/CustomHands/Animations/r_hand_hold_generic_anim.fbx
+- Assets/Models/Crates00/Meshes/Prop_Crate04.FBX
+- Assets/Models/Crates00/Meshes/Prop_Crate00.FBX
+- Assets/Oculus/SampleFramework/Core/CustomHands/Animations/r_hand_relax_mid_fist_anim.fbx
+- Assets/Models/SpaceZeta_Spotlight/Assets/SpotlightStructure2.fbx
+- Assets/EscapeRoom/VRTK_Farm/Models/arrow.fbx
+- Assets/Oculus/SampleFramework/Core/CustomHands/Animations/l_hand_hold_ping_pong_ball_anim.fbx
+- Assets/EscapeRoom/VRTK_Farm/Prefabs/DestinationLocations/DestinationPoint/Models/tube.fbx
+- Assets/Oculus/SampleFramework/Core/CustomHands/Animations/r_hand_cap_touch_index_mask_anim.fbx
+- Assets/Oculus/SampleFramework/Core/CustomHands/Animations/l_hand_point_anim.fbx
+- Assets/EscapeRoom/VRTK_Farm/Prefabs/DestinationLocations/DestinationPoint/Models/hollowcylinder.fbx
+- Assets/Oculus/SampleFramework/Core/CustomHands/Animations/r_hand_cap_touch_anim.fbx
+- Assets/Oculus/SampleFramework/Core/CustomHands/Animations/l_hand_fist_anim.fbx
+- Assets/Models/SpaceZeta_Spotlight/Assets/Spotlight.fbx
+- Assets/Models/Lamps/Meshes/standing_lamp1.fbx
+- Assets/Models/Crates00/Meshes/Prop_Crate02.FBX
+- Assets/Oculus/SampleFramework/Core/CustomHands/Animations/l_hand_cap_touch_anim.fbx
+- Assets/Oculus/SampleFramework/Core/CustomHands/Animations/r_hand_thumbs_up_anim.fbx
+- Assets/Oculus/SampleFramework/Core/CustomHands/Animations/r_hand_relax_3qtr_fist_anim.fbx
+- Assets/Oculus/SampleFramework/Core/CustomHands/Animations/l_hand_relax_3qtr_fist_anim.fbx
+- Assets/Oculus/SampleFramework/Core/CustomHands/Animations/r_hand_cap_touch_thumb_mask_anim.fbx
+- Assets/Oculus/SampleFramework/Core/CustomHands/Animations/r_hand_pinch_anim.fbx
+- Assets/Oculus/SampleFramework/Core/CustomHands/Animations/r_hand_hold_ping_pong_ball_anim.fbx
+- Assets/Oculus/SampleFramework/Core/CustomHands/Animations/l_hand_cap_touch_index_mask_anim.fbx
+- Assets/Oculus/VR/Meshes/OculusTouchForQuestAndRiftS/OculusTouchForQuestAndRiftS_Left.fbx
+- Assets/Oculus/SampleFramework/Core/CustomHands/Animations/l_hand_hold_generic_anim.fbx
+Dependencies:
+- C:/Users/Agno/Universita/Tesi/deep-learning-intro-in-VR/OVRAssetBundles/OVRMasterBundle/asset_mat0
+- C:/Users/Agno/Universita/Tesi/deep-learning-intro-in-VR/OVRAssetBundles/OVRMasterBundle/asset_mat1

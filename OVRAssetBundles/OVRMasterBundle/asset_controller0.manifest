@@ -1,0 +1,27 @@
+ManifestFileVersion: 0
+CRC: 1902992756
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 6e9459cdc6062a53830ef0c84dd4ccff
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: fdf6c57a251b9f6ec27bdd2fe01b033c
+HashAppended: 0
+ClassTypes:
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+Assets:
+- Assets/Animations/Shelf_03_snaps001.controller
+- Assets/Oculus/SampleFramework/Core/CustomHands/Models/RightHandAnimator.controller
+- Assets/Animations/Credits.controller
+- Assets/Models/OVR-custom/Controller/ControllerHighlight.controller
+- Assets/Oculus/SampleFramework/Core/CustomHands/Models/LeftHandAnimator.controller
+- Assets/Animations/Buttonpoles.controller
+- Assets/Animations/Quart_Door_01_snaps002.controller
+Dependencies:
+- C:/Users/Agno/Universita/Tesi/deep-learning-intro-in-VR/OVRAssetBundles/OVRMasterBundle/asset_anim0
+- C:/Users/Agno/Universita/Tesi/deep-learning-intro-in-VR/OVRAssetBundles/OVRMasterBundle/asset_fbx0
+- C:/Users/Agno/Universita/Tesi/deep-learning-intro-in-VR/OVRAssetBundles/OVRMasterBundle/asset_fbx1

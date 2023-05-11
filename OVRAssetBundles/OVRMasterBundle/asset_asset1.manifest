@@ -1,0 +1,19 @@
+ManifestFileVersion: 0
+CRC: 4037566389
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 69ca15de6ee27143b5057938699bca15
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 22d79a0a65c6305de56ce253448902ac
+HashAppended: 0
+ClassTypes:
+- Class: 43
+  Script: {instanceID: 0}
+Assets:
+- Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/SciFi_Industrial/Prefabs/Structure/Walls/Meshes/Quart_WallDoorFrame_01_snaps002.asset
+- Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/SciFi_Industrial/Prefabs/Structure/Walls/Meshes/Quart_Wall_snaps002.asset
+- Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/SciFi_Industrial/Prefabs/Structure/Floors_Ceilings/Meshes/Quart_Ceiling_01_snaps002.asset
+- Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/SciFi_Industrial/Prefabs/Structure/Walls/Meshes/Quart_Wall_Joint_02_snaps002.asset
+Dependencies: []

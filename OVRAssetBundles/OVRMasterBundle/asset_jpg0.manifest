@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 756318531
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 84189872e1c9d1cebd705bbd4a704953
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: f19fbf085e00d23fbc8d6cf7b345590b
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Materials/Floor.jpg
+- Assets/Materials/TexturesCom_TilesPlain0277_2_seamless_S.jpg
+- Assets/Materials/wood1.jpg
+Dependencies: []

@@ -1,0 +1,52 @@
+ManifestFileVersion: 0
+CRC: 1541192502
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 8d1ce578c0e506c0e67adc77e725953c
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 888cea3f6dc7889dc8883f9f52df57ea
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 156
+  Script: {instanceID: 0}
+- Class: 363
+  Script: {instanceID: 0}
+Assets:
+- Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Meshes/Shelf_03_snaps001.asset
+- Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Meshes/Monitor_01_snaps001.asset
+- Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/SciFi_Industrial/Prefabs/Structure/Floors_Ceilings/Meshes/Gen_Floor_01_snaps002.asset
+- Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Meshes/ComputerDesk_01_snaps001.asset
+- Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Meshes/Cabinet_02_snaps001.asset
+- Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Meshes/PotPlant_02_snaps001.asset
+- Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Structure/Floors_Ceilings/Meshes/Classic_Floor_01_snaps001.asset
+- Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/SciFi_Industrial/Prefabs/Props/Meshes/Barrel_03_snaps002.asset
+- Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Meshes/PotPlant_01_snaps001.asset
+- Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/SciFi_Industrial/Prefabs/Structure/Walls/Meshes/Quart_Wall_Joint_01_snaps002.asset
+- Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Meshes/Keyboard_01_snaps001.asset
+- Assets/New Terrain 1.asset
+- Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/SciFi_Industrial/Prefabs/Structure/Walls/Meshes/Quart_Wall_Corner_snaps002.asset
+- Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Meshes/CoffeeMug_01_snaps001.asset
+- Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Meshes/OfficeChair_01_snaps001.asset
+- Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/SNAPS_NoHD/Meshes/Neo_WallDoorFrame_01_4m_snaps001.asset
+- Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/SciFi_Industrial/Prefabs/Structure/Doors_Windows/Meshes/Quart_Door_01_snaps002.asset
+- Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Meshes/Laptop_01_snaps001.asset
+- Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/SNAPS_NoHD/Meshes/Neo_Wall_Corner_4m_snaps001.asset
+- Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/SciFi_Industrial/Prefabs/Props/Meshes/Crate_04_snaps002.asset
+- Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/SNAPS_NoHD/Meshes/Neo_Wall_4m_snaps001.asset
+- Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Meshes/ComputerDesk_02_snaps001.asset
+- Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Meshes/Desklamp_01_snaps001.asset
+- Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/SNAPS_NoHD/Meshes/Neo_Wall_Joint_4m_snaps001.asset
+- Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Meshes/Cabinet_04_snaps001.asset
+- Assets/Scenes/Room1/OcclusionCullingData.asset
+- Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/Props/Meshes/Printer01_snaps001.asset
+- Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/SNAPS_NoHD/Meshes/Neo_Ceiling_01_snaps001.asset
+- Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Prefabs/SNAPS_NoHD/Meshes/Neo_Floor_03_snaps001.asset
+Dependencies: []

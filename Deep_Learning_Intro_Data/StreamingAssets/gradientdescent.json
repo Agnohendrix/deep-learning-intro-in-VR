@@ -1,0 +1,64 @@
+{
+  "data": [
+    {
+      "questiontext": "What is gradient descent used for in NN?",
+      "answers": [
+        "Finding the minimum value for some cost function",
+        "Finding the maximum value for some cost function",
+        "Rolling a ball uphill",
+        "As an activation function"
+      ],
+      "correctanswers": [ 0 ]
+    },
+    {
+      "questiontext": "What is a gradient?",
+      "answers": [
+        "The global minimum of a cost function",
+        "A cost function",
+        "The direction of fastest decrease of a function, from a point p",
+        "The direction of fastest increase of a function, from a point p"
+      ],
+      "correctanswers": [ 3 ]
+    },
+    {
+      "questiontext": "How does gradient descent help finding a minimum of the cost function?",
+      "answers": [
+        "By applying gradient descent, you instantly get the global minimum of the function",
+        "By iteratively calculating the negative gradient and moving in that direction until you have found a local or hopefully the global minimum",
+        "This is not the use case of gradient descent",
+        "By considering multiple inputs to the NN and applying gradient descent to the average of of all inputs, you decrease the average cost"
+      ],
+      "correctanswers": [ 1, 3 ]
+    },
+    {
+      "questiontext": "What can happen if the value of the learning rate is too large?",
+      "answers": [
+        "The global minimum is never found.",
+        "It is very computationally demanding.",
+        "The process of gradient descent can be too slow.",
+        "A suboptimal solution might be found too quickly."
+      ],
+      "correctanswers": [ 3 ]
+    },
+    {
+      "questiontext": "Which technique can be used to speed up the process of finding a minimum of the cost?",
+      "answers": [
+        "Speculative gradient descent",
+        "Stochastic gradient descent",
+        "Conditional gradient descent",
+        "Chaotic gradient descent"
+      ],
+      "correctanswers": [ 1 ]
+    },
+    {
+      "questiontext": "Why is stochastic gradient descent efficient?",
+      "answers": [
+        "Because the amount of training data available is too high",
+        "Since it is well adapted to a high number dimensions",
+        "Because the gradient of the mini-batch is roughly equal to the one averaging over all training input",
+        "Because of the computational power available"
+      ],
+      "correctanswers": [ 2 ]
+    }
+  ]
+}

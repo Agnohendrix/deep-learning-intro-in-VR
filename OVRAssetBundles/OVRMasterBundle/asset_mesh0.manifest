@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 4041985991
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 2a8d860908b16d8c596f43f610e76c78
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 22d79a0a65c6305de56ce253448902ac
+HashAppended: 0
+ClassTypes:
+- Class: 43
+  Script: {instanceID: 0}
+Assets:
+- Assets/Models/OVR-custom/Controller/GripMesh.mesh
+- Assets/Models/OVR-custom/Controller/MenyButton.mesh
+Dependencies: []

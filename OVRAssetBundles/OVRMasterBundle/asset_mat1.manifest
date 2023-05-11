@@ -1,0 +1,59 @@
+ManifestFileVersion: 0
+CRC: 3120511118
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 0a44426c5b8788b658cc6b53417670a5
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 5303b9b1710e06fc245b91cbc1dfd29c
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 84
+  Script: {instanceID: 0}
+Assets:
+- Assets/Materials/Quiz/Green.mat
+- Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/SciFi_Industrial/Materials/Machine
+  Orange Light_snaps002.mat
+- Assets/Materials/Green.mat
+- Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/SciFi_Industrial/Materials/Machine
+  Blue Dark_snaps002.mat
+- Assets/Materials/GoogleForm_purple.mat
+- Assets/Materials/Tiled Floor.mat
+- Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/SciFi_Industrial/Materials/MachineOrange_snaps002.mat
+- Assets/Materials/Quiz/Purple.mat
+- Assets/Materials/Quiz/Red.mat
+- Assets/Materials/Quiz/Blue.mat
+- Assets/Materials/Red.mat
+- Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/SciFi_Industrial/Materials/Machine
+  Blue_snaps002.mat
+- Assets/Materials/Transparent node.mat
+- Assets/Models/Crates00/Meshes/Materials/crate00.mat
+- Assets/Materials/Materials/wood1.mat
+- Packages/io.extendreality.vrtk.prefabs/Interactions/InteractableSnapZone/SharedResources/Materials/SnapZoneHighlight.mat
+- Assets/Materials/Materials/Floor.mat
+- Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Materials/LightGray_snaps001.mat
+- Assets/EscapeRoom/VRTK_Farm/Prefabs/DestinationLocations/DestinationPoint/Materials/ActiveBase.mat
+- Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Materials/Gray_snaps001.mat
+- Assets/EscapeRoom/VRTK_Farm/Prefabs/DestinationLocations/DestinationPoint/Materials/InactiveGlow.mat
+- Assets/Models/Crates00/Meshes/Materials/crate02.mat
+- Assets/Materials/Wood.mat
+- Assets/Materials/Lightbulb green.mat
+- Packages/io.extendreality.vrtk.prefabs/Locomotion/Teleporters/SharedResources/Materials/TeleportFade.mat
+- Assets/Materials/MovieTextures/VideoMaterial.mat
+- Assets/Models/Crates00/Meshes/Materials/crate01.mat
+- Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/ModernOffice_Interior/Materials/Green_snaps001.mat
+- Assets/Oculus/VR/Meshes/OculusTouchForQuestAndRiftS/Materials/OculusTouchForQuestAndRiftS_Material.mat
+- Assets/Materials/Glass node.mat
+Dependencies:
+- C:/Users/Agno/Universita/Tesi/deep-learning-intro-in-VR/OVRAssetBundles/OVRMasterBundle/asset_jpg0
+- C:/Users/Agno/Universita/Tesi/deep-learning-intro-in-VR/OVRAssetBundles/OVRMasterBundle/asset_png0
+- C:/Users/Agno/Universita/Tesi/deep-learning-intro-in-VR/OVRAssetBundles/OVRMasterBundle/asset_rendertexture0
+- C:/Users/Agno/Universita/Tesi/deep-learning-intro-in-VR/OVRAssetBundles/OVRMasterBundle/asset_shader0
+- C:/Users/Agno/Universita/Tesi/deep-learning-intro-in-VR/OVRAssetBundles/OVRMasterBundle/asset_tga0
