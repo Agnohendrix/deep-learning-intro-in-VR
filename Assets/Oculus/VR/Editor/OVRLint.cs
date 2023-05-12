@@ -643,7 +643,7 @@ public class OVRLint : EditorWindow
 	static void CheckStaticAndroidIssues()
 	{
 		// Check that the minSDKVersion meets requirement, 21 for Gear and Go, 23 for Quest
-		AndroidSdkVersions recommendedAndroidMinSdkVersion = AndroidSdkVersions.AndroidApiLevel21;
+		AndroidSdkVersions recommendedAndroidMinSdkVersion = AndroidSdkVersions.AndroidApiLevel22;
 		if (OVRDeviceSelector.isTargetDeviceQuest)
 		{
 			recommendedAndroidMinSdkVersion = AndroidSdkVersions.AndroidApiLevel23;
