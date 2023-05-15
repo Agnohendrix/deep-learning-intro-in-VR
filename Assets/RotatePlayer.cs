@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class RotatePlayer : MonoBehaviour
 {
-    OVRInputAxis2DAction rightThumbstick;
     public Transform playerAlias;
 
-    public float rotationSpeed;
+    float rotationSpeed = 30;
     public float debounceTime;
     public int angle;
     bool rotAvailable = true;
