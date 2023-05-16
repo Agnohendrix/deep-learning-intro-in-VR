@@ -18,7 +18,7 @@ public class RotatePlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 y = OVRInput.Get(OVRInput.Axis2D.SecondaryThumbstick);
+        Vector2 y = OVRInput.Get(OVRInput.RawAxis2D.RThumbstick);
         int rot = Mathf.RoundToInt(y.x);
         if (rot != 0)
 		{

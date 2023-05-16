@@ -3607,7 +3607,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerAlias: {fileID: 1876605040}
-  rotationSpeed: 30
   debounceTime: 0.5
   angle: 30
 --- !u!4 &411912985 stripped
@@ -16432,6 +16431,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3e1ae4b20d1a0845a32d4418535010b, type: 3}
+--- !u!1 &1809028371 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6613904117508832961, guid: 1cde8f42f235a4245be0965cbdf44288,
+    type: 3}
+  m_PrefabInstance: {fileID: 5186885590808898548}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1809028374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1809028371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9be6c36dc41a4b140a6d06bd00b7738d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerAlias: {fileID: 1876605040}
+  movementSpeed: 10
 --- !u!1 &1811902897
 GameObject:
   m_ObjectHideFlags: 0
@@ -20433,6 +20452,11 @@ PrefabInstance:
     - target: {fileID: 5792659402652503373, guid: 1cde8f42f235a4245be0965cbdf44288,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6613904117508832961, guid: 1cde8f42f235a4245be0965cbdf44288,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6613904117894873604, guid: 1cde8f42f235a4245be0965cbdf44288,
