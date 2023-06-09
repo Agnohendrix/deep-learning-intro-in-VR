@@ -7,6 +7,7 @@ public class UIManager : MonoBehaviour
 {
     public Button tutorialBtn;
     public Button room1Btn;
+    public Button room2Btn;
     public GameObject leftScreen;
     public GameObject midScreen;
     public GameObject rightScreen;
@@ -26,6 +27,11 @@ public class UIManager : MonoBehaviour
         room1Btn.onClick.AddListener(() =>
         {
             SceneLoader.Load(SceneLoader.Scene.Room1);
+        });
+
+        room2Btn.onClick.AddListener(() =>
+        {
+            SceneLoader.Load(SceneLoader.Scene.FiltersRoom);
         });
     }
 
