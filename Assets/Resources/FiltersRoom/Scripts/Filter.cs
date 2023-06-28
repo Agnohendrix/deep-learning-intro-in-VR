@@ -57,7 +57,10 @@ public class Filter : MonoBehaviour
     public void input1Snapped(GameObject input)
     {
         Debug.Log("snapped");
-        x1 = input.GetComponent<NNInput>().getInputValue();
+        //x1 = input.GetComponent<FilterInput>().getInputValue();
+        x1 = 1;
+        int[] cubeValue = input.GetComponent<FilterInput>().getInputValue();
+        Debug.Log("snapped " + string.Join(" ", cubeValue));
     }
 
     public void input1UnSnapped()
