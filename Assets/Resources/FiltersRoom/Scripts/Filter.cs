@@ -22,12 +22,16 @@ public class Filter : MonoBehaviour
 
     private int previousOutput = 0;
 
+    private int[] snapZoneValue;
+    private int[] cubeValue;
 
 
     // Start is called before the first frame update
     void Start()
     {
         slideDoorScript = door.GetComponent<SlideDoor>();
+        snapZoneValue = this.GetComponent<SnapZoneInput3x3>().getInputValue();
+        Debug.Log("snapZone value: " + string.Join(" ", snapZoneValue));
     }
 
     // Update is called once per frame
@@ -59,8 +63,20 @@ public class Filter : MonoBehaviour
         Debug.Log("snapped");
         //x1 = input.GetComponent<FilterInput>().getInputValue();
         x1 = 1;
-        int[] cubeValue = input.GetComponent<FilterInput>().getInputValue();
-        Debug.Log("snapped " + string.Join(" ", cubeValue));
+        cubeValue = input.GetComponent<FilterInput>().getInputValue();
+        Debug.Log("snapped object " + this.name + " " + string.Join(" ", cubeValue));
+
+    }
+
+    public void snapZoneSnapped(string value)
+	{
+        Debug.Log("snapzone");
+        Debug.Log("snapzone object " + value);
+        Debug.Log(this.transform.parent.name);
+        Transform n = this.transform.FindChild(value);
+        SnapZoneInput3x3 v = n.GetComponent<SnapZoneInput3x3>();
+        Debug.Log("this " + string.Join(" ", v.getInputValue()));
+
     }
 
     public void input1UnSnapped()
@@ -77,6 +93,11 @@ public class Filter : MonoBehaviour
     {
         x2 = 999;
     }
+
+    private int calculateMatrixOutput()
+	{
+        return 1;
+	}
 
     private int calculateOutput()
     {
