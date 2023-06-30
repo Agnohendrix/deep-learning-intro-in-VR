@@ -38,6 +38,7 @@ public class Filter : MonoBehaviour
     void Update()
     {
         //should probably not do this in this loop
+        /*
         if (calculateOutput() == 1 && previousOutput == 0)
         {
             slideDoorScript.OpenDoor();
@@ -55,7 +56,7 @@ public class Filter : MonoBehaviour
                 o.GetComponent<Renderer>().material = red;
             }
             previousOutput = 0;
-        }
+        }*/
     }
 
     public void input1Snapped(GameObject input)
@@ -77,7 +78,9 @@ public class Filter : MonoBehaviour
         SnapZoneInput3x3 v = n.GetComponent<SnapZoneInput3x3>();
         Debug.Log("this " + string.Join(" ", v.getInputValue()));
         snapZoneValue = v.getInputValue();
-        calculateMatrixOutput();
+        int result = calculateMatrixOutput();
+        if(result == 45)
+            slideDoorScript.OpenDoor();
 
     }
 
