@@ -76,6 +76,8 @@ public class Filter : MonoBehaviour
         Transform n = this.transform.FindChild(value);
         SnapZoneInput3x3 v = n.GetComponent<SnapZoneInput3x3>();
         Debug.Log("this " + string.Join(" ", v.getInputValue()));
+        snapZoneValue = v.getInputValue();
+        calculateMatrixOutput();
 
     }
 
@@ -96,7 +98,13 @@ public class Filter : MonoBehaviour
 
     private int calculateMatrixOutput()
 	{
-        return 1;
+        int tot = 0;
+        for(int i=0; i<9; i++)
+		{
+            tot += snapZoneValue[i] * cubeValue[i];
+		}
+        Debug.Log("operation value: " + tot);
+        return tot;
 	}
 
     private int calculateOutput()
