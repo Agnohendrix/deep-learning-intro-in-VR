@@ -25,4 +25,10 @@ public class SnapZoneInput3x3 : MonoBehaviour
         result = Array.ConvertAll(strlist, int.Parse);
         return result;
     }
+
+    public void setInputValueSetFromEditor(string value)
+	{
+        this.inputValueSetFromEditor = value;
+	}
+    
 }

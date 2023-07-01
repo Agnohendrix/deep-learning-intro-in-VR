@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Filter : MonoBehaviour
@@ -30,8 +31,13 @@ public class Filter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Initialize numbers for snapzones
+        GameObject snap1 = GameObject.Find("InputSnapZone11");
+        snap1.GetComponent<SnapZoneInput3x3>().setInputValueSetFromEditor("0,1,0,1,0,1,0,1,0");
+        snap1.transform.Find("Text").GetComponent<TextMeshPro>().SetText("0 1 0\n1 0 1\n0 1 0");
+
         slideDoorScript = door.GetComponent<SlideDoor>();
-        snapZoneValue = this.GetComponent<SnapZoneInput3x3>().getInputValue();
+        snapZoneValue = snap1.GetComponent<SnapZoneInput3x3>().getInputValue();
         Debug.Log("snapZone value: " + string.Join(" ", snapZoneValue));
     }
 
