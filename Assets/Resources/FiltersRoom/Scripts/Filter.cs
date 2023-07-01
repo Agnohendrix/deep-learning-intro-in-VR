@@ -25,6 +25,7 @@ public class Filter : MonoBehaviour
     private int[] snapZoneValue;
     private int[] cubeValue;
 
+    public GameObject cubePrefab;
 
     // Start is called before the first frame update
     void Start()
