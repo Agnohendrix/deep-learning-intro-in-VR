@@ -33,12 +33,40 @@ public class Filter : MonoBehaviour
     {
         //Initialize numbers for snapzones
         GameObject snap1 = GameObject.Find("InputSnapZone11");
-        snap1.GetComponent<SnapZoneInput3x3>().setInputValueSetFromEditor("0,1,0,1,0,1,0,1,0");
-        snap1.transform.Find("Text").GetComponent<TextMeshPro>().SetText("0 1 0\n1 0 1\n0 1 0");
+        setRandomValuesSnapZone(snap1);
 
         slideDoorScript = door.GetComponent<SlideDoor>();
         snapZoneValue = snap1.GetComponent<SnapZoneInput3x3>().getInputValue();
         Debug.Log("snapZone value: " + string.Join(" ", snapZoneValue));
+    }
+
+    void setRandomValuesSnapZone(GameObject snapZone)
+	{
+        string editorValue = "";
+        string textMeshValue = "";
+        int v;
+        for(int i=1; i< 10; i++)
+		{
+            v = Random.Range(0, 9);
+            //Used to calculate matrix results
+            editorValue += v;
+            textMeshValue += v;
+            if (i < 9)
+                editorValue += ",";
+
+            //Used to visualize the values
+            if(i % 3 == 0 && i < 9)
+			{
+                textMeshValue += "\n";
+			} else if (i < 9)
+			{
+                textMeshValue += " ";
+			}
+		}
+        snapZone.GetComponent<SnapZoneInput3x3>().setInputValueSetFromEditor(editorValue);
+        snapZone.transform.Find("Text").GetComponent<TextMeshPro>().SetText(textMeshValue);
+
+
     }
 
     // Update is called once per frame
