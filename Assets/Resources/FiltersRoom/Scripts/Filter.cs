@@ -26,7 +26,6 @@ public class Filter : MonoBehaviour
     private int[] snapZoneValue;
     private int[] cubeValue;
 
-    public GameObject cubePrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -35,10 +34,80 @@ public class Filter : MonoBehaviour
         GameObject snap1 = GameObject.Find("InputSnapZone11");
         setRandomValuesSnapZone(snap1);
 
+        //Initialize numbers for cubes
+        GameObject cube1 = GameObject.Find("Interactable.InputFilter1");
+        
+        Debug.Log("cubetext " + cube1.transform.Find("Meshes").Find("Input").Find("Canvas (1)").Find("Title").GetComponent<TextMeshProUGUI>().text);
+        setRandomValues3x3(cube1, "cube");
+
         slideDoorScript = door.GetComponent<SlideDoor>();
         snapZoneValue = snap1.GetComponent<SnapZoneInput3x3>().getInputValue();
         Debug.Log("snapZone value: " + string.Join(" ", snapZoneValue));
     }
+
+    //Sets random values for matrix snapzones and cubes
+    void setRandomValues3x3(GameObject obj, string type)
+	{
+        int maxRange;
+
+        string editorValue = "";
+        string textMeshValue = "";
+        int v;
+
+        if (type == "cube")
+        {
+            //Initialize values for cube
+            maxRange = 2;
+            for (int i = 1; i < 10; i++)
+            {
+                v = Random.Range(0, maxRange);
+                //Used to calculate matrix results
+                editorValue += v;
+                textMeshValue += v;
+                if (i < 9)
+                    editorValue += ",";
+
+                //Used to visualize the values
+                if (i % 3 == 0 && i < 9)
+                {
+                    textMeshValue += "\n";
+                }
+                else if (i < 9)
+                {
+                    textMeshValue += " ";
+                }
+            }
+            obj.GetComponent<FilterInput>().setInputValueSetFromEditor(editorValue);
+            obj.transform.Find("Meshes").Find("Input").Find("Canvas (1)").Find("Title").GetComponent<TextMeshProUGUI>().SetText(textMeshValue);
+        }
+        else if (type == "snapzone")
+		{
+            //Initialize values for snapzone
+            maxRange = 10;
+            for (int i = 1; i < 10; i++)
+            {
+                v = Random.Range(0, maxRange);
+                //Used to calculate matrix results
+                editorValue += v;
+                textMeshValue += v;
+                if (i < 9)
+                    editorValue += ",";
+
+                //Used to visualize the values
+                if (i % 3 == 0 && i < 9)
+                {
+                    textMeshValue += "\n";
+                }
+                else if (i < 9)
+                {
+                    textMeshValue += " ";
+                }
+            }
+            obj.GetComponent<SnapZoneInput3x3>().setInputValueSetFromEditor(editorValue);
+            obj.transform.Find("Text").GetComponent<TextMeshPro>().SetText(textMeshValue);
+
+        }
+	}
 
     void setRandomValuesSnapZone(GameObject snapZone)
 	{
@@ -65,8 +134,6 @@ public class Filter : MonoBehaviour
 		}
         snapZone.GetComponent<SnapZoneInput3x3>().setInputValueSetFromEditor(editorValue);
         snapZone.transform.Find("Text").GetComponent<TextMeshPro>().SetText(textMeshValue);
-
-
     }
 
     // Update is called once per frame

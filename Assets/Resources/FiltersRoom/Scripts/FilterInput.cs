@@ -25,4 +25,9 @@ public class FilterInput : MonoBehaviour
         result = Array.ConvertAll(strlist, int.Parse);
         return result;
 	}
+
+    public void setInputValueSetFromEditor(string value)
+    {
+        this.inputValueSetFromEditor = value;
+    }
 }
