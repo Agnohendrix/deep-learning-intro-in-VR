@@ -32,17 +32,34 @@ public class Filter : MonoBehaviour
     {
         //Initialize numbers for snapzones
         GameObject snap1 = GameObject.Find("InputSnapZone11");
-        setRandomValuesSnapZone(snap1);
+        GameObject snap2 = GameObject.Find("InputSnapZone12");
+        GameObject snap3 = GameObject.Find("InputSnapZone13");
+        GameObject snap4 = GameObject.Find("InputSnapZone21");
+        GameObject snap5 = GameObject.Find("InputSnapZone22");
+        GameObject snap6 = GameObject.Find("InputSnapZone23");
+        GameObject snap7 = GameObject.Find("InputSnapZone31");
+        GameObject snap8 = GameObject.Find("InputSnapZone32");
+        GameObject snap9 = GameObject.Find("InputSnapZone33");
+        setRandomValues3x3(snap1, "snapzone");
+        setRandomValues3x3(snap2, "snapzone");
+        setRandomValues3x3(snap3, "snapzone");
+        setRandomValues3x3(snap4, "snapzone");
+        setRandomValues3x3(snap5, "snapzone");
+        setRandomValues3x3(snap6, "snapzone");
+        setRandomValues3x3(snap7, "snapzone");
+        setRandomValues3x3(snap8, "snapzone");
+        setRandomValues3x3(snap9, "snapzone");
 
         //Initialize numbers for cubes
         GameObject cube1 = GameObject.Find("Interactable.InputFilter1");
-        
-        Debug.Log("cubetext " + cube1.transform.Find("Meshes").Find("Input").Find("Canvas (1)").Find("Title").GetComponent<TextMeshProUGUI>().text);
+        GameObject cube2 = GameObject.Find("Interactable.InputFilter2");
+        GameObject cube3 = GameObject.Find("Interactable.InputFilter3");
         setRandomValues3x3(cube1, "cube");
+        setRandomValues3x3(cube2, "cube");
+        setRandomValues3x3(cube3, "cube");
 
         slideDoorScript = door.GetComponent<SlideDoor>();
         snapZoneValue = snap1.GetComponent<SnapZoneInput3x3>().getInputValue();
-        Debug.Log("snapZone value: " + string.Join(" ", snapZoneValue));
     }
 
     //Sets random values for matrix snapzones and cubes
