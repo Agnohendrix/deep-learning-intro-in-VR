@@ -26,20 +26,20 @@ public class Filter : MonoBehaviour
     private int[] snapZoneValue;
     private int[] cubeValue;
 
-
     // Start is called before the first frame update
     void Start()
     {
+        
         //Initialize numbers for snapzones
-        GameObject snap1 = GameObject.Find("InputSnapZone11");
-        GameObject snap2 = GameObject.Find("InputSnapZone12");
-        GameObject snap3 = GameObject.Find("InputSnapZone13");
-        GameObject snap4 = GameObject.Find("InputSnapZone21");
-        GameObject snap5 = GameObject.Find("InputSnapZone22");
-        GameObject snap6 = GameObject.Find("InputSnapZone23");
-        GameObject snap7 = GameObject.Find("InputSnapZone31");
-        GameObject snap8 = GameObject.Find("InputSnapZone32");
-        GameObject snap9 = GameObject.Find("InputSnapZone33");
+        GameObject snap1 = transform.Find("InputSnapZone11").gameObject;
+        GameObject snap2 = transform.Find("InputSnapZone12").gameObject;
+        GameObject snap3 = transform.Find("InputSnapZone13").gameObject;
+        GameObject snap4 = transform.Find("InputSnapZone21").gameObject;
+        GameObject snap5 = transform.Find("InputSnapZone22").gameObject;
+        GameObject snap6 = transform.Find("InputSnapZone23").gameObject;
+        GameObject snap7 = transform.Find("InputSnapZone31").gameObject;
+        GameObject snap8 = transform.Find("InputSnapZone32").gameObject;
+        GameObject snap9 = transform.Find("InputSnapZone33").gameObject;
         setRandomValues3x3(snap1, "snapzone");
         setRandomValues3x3(snap2, "snapzone");
         setRandomValues3x3(snap3, "snapzone");
@@ -51,9 +51,9 @@ public class Filter : MonoBehaviour
         setRandomValues3x3(snap9, "snapzone");
 
         //Initialize numbers for cubes
-        GameObject cube1 = GameObject.Find("Interactable.InputFilter1");
-        GameObject cube2 = GameObject.Find("Interactable.InputFilter2");
-        GameObject cube3 = GameObject.Find("Interactable.InputFilter3");
+        GameObject cube1 = transform.Find("Interactable.InputFilter1").gameObject;
+        GameObject cube2 = transform.Find("Interactable.InputFilter2").gameObject;
+        GameObject cube3 = transform.Find("Interactable.InputFilter3").gameObject;
         setRandomValues3x3(cube1, "cube");
         setRandomValues3x3(cube2, "cube");
         setRandomValues3x3(cube3, "cube");
