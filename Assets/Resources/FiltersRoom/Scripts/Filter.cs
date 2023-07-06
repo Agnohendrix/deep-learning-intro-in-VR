@@ -21,7 +21,7 @@ public class Filter : MonoBehaviour
     private int x1 = 999;
     private int x2 = 999;
 
-    private int previousOutput = 0;
+    int expectedResult;
 
     private int[] snapZoneValue;
     private int[] cubeValue;
@@ -59,8 +59,67 @@ public class Filter : MonoBehaviour
         setRandomValues3x3(cube3, "cube");
 
         slideDoorScript = door.GetComponent<SlideDoor>();
-        snapZoneValue = snap1.GetComponent<SnapZoneInput3x3>().getInputValue();
+        
+        //Randomizes correct objects to open the door
+        int[] cubeValue = { };
+        int[] snapValue = { };
+        switch (Random.Range(1, 4))
+		{
+            case 1:
+                cubeValue = cube1.GetComponent<FilterInput>().getInputValue();
+                break;
+            case 2:
+                cubeValue = cube2.GetComponent<FilterInput>().getInputValue();
+                break;
+            case 3:
+                cubeValue = cube3.GetComponent<FilterInput>().getInputValue();
+                break;
+		}
+
+        switch (Random.Range(1, 10))
+        {
+            case 1:
+                snapValue = snap1.GetComponent<SnapZoneInput3x3>().getInputValue();
+                break;
+            case 2:
+                snapValue = snap2.GetComponent<SnapZoneInput3x3>().getInputValue();
+                break;
+            case 3:
+                snapValue = snap3.GetComponent<SnapZoneInput3x3>().getInputValue();
+                break;
+            case 4:
+                snapValue = snap4.GetComponent<SnapZoneInput3x3>().getInputValue();
+                break;
+            case 5:
+                snapValue = snap5.GetComponent<SnapZoneInput3x3>().getInputValue();
+                break;
+            case 6:
+                snapValue = snap6.GetComponent<SnapZoneInput3x3>().getInputValue();
+                break;
+            case 7:
+                snapValue = snap7.GetComponent<SnapZoneInput3x3>().getInputValue();
+                break;
+            case 8:
+                snapValue = snap8.GetComponent<SnapZoneInput3x3>().getInputValue();
+                break;
+            case 9:
+                snapValue = snap9.GetComponent<SnapZoneInput3x3>().getInputValue();
+                break;
+        }
+
+        int tot = 0;
+        for (int i = 0; i < 9; i++)
+        {
+            tot += snapValue[i] * cubeValue[i];
+        }
+        Debug.Log("operation value: " + tot);
+        expectedResult = tot;
+
+        //Sets text on board
+        this.transform.Find("Info board small").Find("Canvas").Find("Panel").Find("Text").GetComponent<TextMeshProUGUI>().SetText("The requested output value is " + tot);
+
     }
+
 
     //Sets random values for matrix snapzones and cubes
     void setRandomValues3x3(GameObject obj, string type)
@@ -126,32 +185,6 @@ public class Filter : MonoBehaviour
         }
 	}
 
-    void setRandomValuesSnapZone(GameObject snapZone)
-	{
-        string editorValue = "";
-        string textMeshValue = "";
-        int v;
-        for(int i=1; i< 10; i++)
-		{
-            v = Random.Range(0, 9);
-            //Used to calculate matrix results
-            editorValue += v;
-            textMeshValue += v;
-            if (i < 9)
-                editorValue += ",";
-
-            //Used to visualize the values
-            if(i % 3 == 0 && i < 9)
-			{
-                textMeshValue += "\n";
-			} else if (i < 9)
-			{
-                textMeshValue += " ";
-			}
-		}
-        snapZone.GetComponent<SnapZoneInput3x3>().setInputValueSetFromEditor(editorValue);
-        snapZone.transform.Find("Text").GetComponent<TextMeshPro>().SetText(textMeshValue);
-    }
 
     // Update is called once per frame
     void Update()
@@ -193,12 +226,12 @@ public class Filter : MonoBehaviour
         Debug.Log("snapzone");
         Debug.Log("snapzone object " + value);
         Debug.Log(this.transform.parent.name);
-        Transform n = this.transform.FindChild(value);
+        Transform n = this.transform.Find(value);
         SnapZoneInput3x3 v = n.GetComponent<SnapZoneInput3x3>();
         Debug.Log("this " + string.Join(" ", v.getInputValue()));
         snapZoneValue = v.getInputValue();
         int result = calculateMatrixOutput();
-        if(result == 45)
+        if(result == expectedResult)
             slideDoorScript.OpenDoor();
 
     }
