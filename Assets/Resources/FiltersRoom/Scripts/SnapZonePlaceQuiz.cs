@@ -76,38 +76,33 @@ public class SnapZonePlaceQuiz : MonoBehaviour
                 break;
         }
 
-        switch (Random.Range(1, 10))
-        {
-            case 1:
-                snapValue = snap1.GetComponent<SnapZoneInput3x3>().getInputValue();
-                break;
-            case 2:
-                snapValue = snap2.GetComponent<SnapZoneInput3x3>().getInputValue();
-                break;
-            case 3:
-                snapValue = snap3.GetComponent<SnapZoneInput3x3>().getInputValue();
-                break;
-            case 4:
-                snapValue = snap4.GetComponent<SnapZoneInput3x3>().getInputValue();
-                break;
-            case 5:
-                snapValue = snap5.GetComponent<SnapZoneInput3x3>().getInputValue();
-                break;
-            case 6:
-                snapValue = snap6.GetComponent<SnapZoneInput3x3>().getInputValue();
-                break;
-            case 7:
-                snapValue = snap7.GetComponent<SnapZoneInput3x3>().getInputValue();
-                break;
-            case 8:
-                snapValue = snap8.GetComponent<SnapZoneInput3x3>().getInputValue();
-                break;
-            case 9:
-                snapValue = snap9.GetComponent<SnapZoneInput3x3>().getInputValue();
-                break;
-        }
-
+        int outputValue = 0;
         int tot = 0;
+        snapValue = snap1.GetComponent<SnapZoneInput3x3>().getInputValue();
+        for(int i = 0; i< 9; i++)
+		{
+            tot += snapValue[i] * cubeValue[i];
+		}
+        transform.Find("OutputSnapZone11").Find("Text").GetComponent<TextMeshPro>().SetText(tot.ToString());
+        tot = 0;
+
+        snapValue = snap2.GetComponent<SnapZoneInput3x3>().getInputValue();
+
+        snapValue = snap3.GetComponent<SnapZoneInput3x3>().getInputValue();
+
+        snapValue = snap4.GetComponent<SnapZoneInput3x3>().getInputValue();
+
+        snapValue = snap5.GetComponent<SnapZoneInput3x3>().getInputValue();
+
+        snapValue = snap6.GetComponent<SnapZoneInput3x3>().getInputValue();
+
+        snapValue = snap7.GetComponent<SnapZoneInput3x3>().getInputValue();
+
+        snapValue = snap8.GetComponent<SnapZoneInput3x3>().getInputValue();
+
+        snapValue = snap9.GetComponent<SnapZoneInput3x3>().getInputValue();
+
+        
         for (int i = 0; i < 9; i++)
         {
             tot += snapValue[i] * cubeValue[i];
@@ -115,8 +110,8 @@ public class SnapZonePlaceQuiz : MonoBehaviour
         Debug.Log("operation value: " + tot);
         expectedResult = tot;
 
-        //Sets text on board
-        this.transform.Find("Info board small").Find("Canvas").Find("Panel").Find("Text").GetComponent<TextMeshProUGUI>().SetText("The requested output value is " + tot);
+        //Sets Output result
+        
 
     }
 
