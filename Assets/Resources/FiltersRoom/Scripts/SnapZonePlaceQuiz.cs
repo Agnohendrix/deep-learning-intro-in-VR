@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 
@@ -25,6 +26,8 @@ public class SnapZonePlaceQuiz : MonoBehaviour
 
     private int[] snapZoneValue;
     private int[] cubeValue;
+
+    private int[] chosenCube;
 
     // Start is called before the first frame update
     void Start()
@@ -75,8 +78,9 @@ public class SnapZonePlaceQuiz : MonoBehaviour
                 cubeValue = cube3.GetComponent<FilterInput>().getInputValue();
                 break;
         }
+        chosenCube = cubeValue;
 
-        int outputValue = 0;
+        //Calculates and prints output matrix
         int tot = 0;
         snapValue = snap1.GetComponent<SnapZoneInput3x3>().getInputValue();
         for(int i = 0; i< 9; i++)
@@ -86,33 +90,71 @@ public class SnapZonePlaceQuiz : MonoBehaviour
         transform.Find("OutputSnapZone11").Find("Text").GetComponent<TextMeshPro>().SetText(tot.ToString());
         tot = 0;
 
+        //Repeat for all matrix
         snapValue = snap2.GetComponent<SnapZoneInput3x3>().getInputValue();
-
-        snapValue = snap3.GetComponent<SnapZoneInput3x3>().getInputValue();
-
-        snapValue = snap4.GetComponent<SnapZoneInput3x3>().getInputValue();
-
-        snapValue = snap5.GetComponent<SnapZoneInput3x3>().getInputValue();
-
-        snapValue = snap6.GetComponent<SnapZoneInput3x3>().getInputValue();
-
-        snapValue = snap7.GetComponent<SnapZoneInput3x3>().getInputValue();
-
-        snapValue = snap8.GetComponent<SnapZoneInput3x3>().getInputValue();
-
-        snapValue = snap9.GetComponent<SnapZoneInput3x3>().getInputValue();
-
-        
         for (int i = 0; i < 9; i++)
         {
             tot += snapValue[i] * cubeValue[i];
         }
-        Debug.Log("operation value: " + tot);
-        expectedResult = tot;
+        transform.Find("OutputSnapZone12").Find("Text").GetComponent<TextMeshPro>().SetText(tot.ToString());
+        tot = 0;
 
-        //Sets Output result
+        snapValue = snap3.GetComponent<SnapZoneInput3x3>().getInputValue();
+        for (int i = 0; i < 9; i++)
+        {
+            tot += snapValue[i] * cubeValue[i];
+        }
+        transform.Find("OutputSnapZone13").Find("Text").GetComponent<TextMeshPro>().SetText(tot.ToString());
+        tot = 0;
+
+        snapValue = snap4.GetComponent<SnapZoneInput3x3>().getInputValue();
+        for (int i = 0; i < 9; i++)
+        {
+            tot += snapValue[i] * cubeValue[i];
+        }
+        transform.Find("OutputSnapZone21").Find("Text").GetComponent<TextMeshPro>().SetText(tot.ToString());
+        tot = 0;
+
+        snapValue = snap5.GetComponent<SnapZoneInput3x3>().getInputValue();
+        for (int i = 0; i < 9; i++)
+        {
+            tot += snapValue[i] * cubeValue[i];
+        }
+        transform.Find("OutputSnapZone22").Find("Text").GetComponent<TextMeshPro>().SetText(tot.ToString());
+        tot = 0;
+
+        snapValue = snap6.GetComponent<SnapZoneInput3x3>().getInputValue();
+        for (int i = 0; i < 9; i++)
+        {
+            tot += snapValue[i] * cubeValue[i];
+        }
+        transform.Find("OutputSnapZone23").Find("Text").GetComponent<TextMeshPro>().SetText(tot.ToString());
+        tot = 0;
+
+        snapValue = snap7.GetComponent<SnapZoneInput3x3>().getInputValue();
+        for (int i = 0; i < 9; i++)
+        {
+            tot += snapValue[i] * cubeValue[i];
+        }
+        transform.Find("OutputSnapZone31").Find("Text").GetComponent<TextMeshPro>().SetText(tot.ToString());
+        tot = 0;
+
+        snapValue = snap8.GetComponent<SnapZoneInput3x3>().getInputValue();
+        for (int i = 0; i < 9; i++)
+        {
+            tot += snapValue[i] * cubeValue[i];
+        }
+        transform.Find("OutputSnapZone32").Find("Text").GetComponent<TextMeshPro>().SetText(tot.ToString());
+        tot = 0;
+
+        snapValue = snap9.GetComponent<SnapZoneInput3x3>().getInputValue();
+        for (int i = 0; i < 9; i++)
+        {
+            tot += snapValue[i] * cubeValue[i];
+        }
+        transform.Find("OutputSnapZone33").Find("Text").GetComponent<TextMeshPro>().SetText(tot.ToString());
         
-
+        
     }
 
 
@@ -180,31 +222,15 @@ public class SnapZonePlaceQuiz : MonoBehaviour
         }
     }
 
-
-    // Update is called once per frame
-    void Update()
-    {
-        //should probably not do this in this loop
-        /*
-        if (calculateOutput() == 1 && previousOutput == 0)
-        {
+    public void filterSnapped(GameObject input)
+	{
+        int[] filterValue = input.GetComponent<FilterInput>().getInputValue();
+        Debug.Log("snapped object " + this.name + " " + string.Join(" ", filterValue) + " chosenCube " + string.Join(" ", chosenCube) + " " + filterValue.Equals(chosenCube));
+        if (filterValue.SequenceEqual(chosenCube))
+		{
             slideDoorScript.OpenDoor();
-            foreach (GameObject o in outputElements)
-            {
-                o.GetComponent<Renderer>().material = green;
-            }
-            previousOutput = 1;
-        }
-        else if (calculateOutput() == 0 && previousOutput == 1)
-        {
-            slideDoorScript.CloseDoor();
-            foreach (GameObject o in outputElements)
-            {
-                o.GetComponent<Renderer>().material = red;
-            }
-            previousOutput = 0;
-        }*/
-    }
+		}
+	}
 
     public void input1Snapped(GameObject input)
     {
