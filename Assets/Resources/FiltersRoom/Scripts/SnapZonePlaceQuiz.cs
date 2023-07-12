@@ -225,7 +225,6 @@ public class SnapZonePlaceQuiz : MonoBehaviour
     public void filterSnapped(GameObject input)
 	{
         int[] filterValue = input.GetComponent<FilterInput>().getInputValue();
-        Debug.Log("snapped object " + this.name + " " + string.Join(" ", filterValue) + " chosenCube " + string.Join(" ", chosenCube) + " " + filterValue.Equals(chosenCube));
         if (filterValue.SequenceEqual(chosenCube))
 		{
             slideDoorScript.OpenDoor();
