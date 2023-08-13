@@ -10,18 +10,13 @@ public class SnapZonePlaceQuiz : MonoBehaviour
     private SlideDoor slideDoorScript;
 
     public GameObject lamp;
-    private bool solved = false;
+    public GameObject lampOther;
 
     public Material red;
     public Material green;
     public List<GameObject> outputElements;
 
-    [SerializeField]
-    private int bias = 3;
-    [SerializeField]
-    private int w1 = -2;
-    [SerializeField]
-    private int w2 = -2;
+
     private int x1 = 999;
     private int x2 = 999;
 
@@ -35,10 +30,6 @@ public class SnapZonePlaceQuiz : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        /*Material[] lampColors = lamp.GetComponent<MeshRenderer>().materials;
-        lampColors[1] = green;
-        lamp.GetComponent<MeshRenderer>().materials = lampColors;
-        Debug.Log(green);*/
 
         //Initialize numbers for snapzones
         GameObject snap1 = transform.Find("InputSnapZone11").gameObject;
@@ -235,9 +226,14 @@ public class SnapZonePlaceQuiz : MonoBehaviour
         if (filterValue.SequenceEqual(chosenCube))
 		{
             Material[] lampColors = lamp.GetComponent<MeshRenderer>().materials;
+            Debug.Log("material equals: " + (lampColors[1] == green));
             lampColors[1] = green;
             lamp.GetComponent<MeshRenderer>().materials = lampColors;
-            slideDoorScript.OpenDoor();
+            Debug.Log("material equals: " + (lampColors[1] == green));
+
+            //If other lamp is green open the door
+            if(lampOther.GetComponent<MeshRenderer>().materials[1] == green)
+                slideDoorScript.OpenDoor();
 		}
 	}
 
@@ -265,9 +261,7 @@ public class SnapZonePlaceQuiz : MonoBehaviour
 		{
             //If other task is complete
             slideDoorScript.OpenDoor();
-        }
-            
-
+        }            
     }
 
     public void input1UnSnapped()
@@ -294,17 +288,5 @@ public class SnapZonePlaceQuiz : MonoBehaviour
         }
         Debug.Log("operation value: " + tot);
         return tot;
-    }
-
-    private int calculateOutput()
-    {
-        if ((w1 * x1) + (w2 * x2) + bias > 0)
-        {
-            return 1;
-        }
-        else
-        {
-            return 0;
-        }
     }
 }
