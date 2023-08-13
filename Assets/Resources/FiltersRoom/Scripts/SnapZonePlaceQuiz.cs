@@ -9,6 +9,9 @@ public class SnapZonePlaceQuiz : MonoBehaviour
     public GameObject door;
     private SlideDoor slideDoorScript;
 
+    public GameObject lamp;
+    private bool solved = false;
+
     public Material red;
     public Material green;
     public List<GameObject> outputElements;
@@ -32,6 +35,10 @@ public class SnapZonePlaceQuiz : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        /*Material[] lampColors = lamp.GetComponent<MeshRenderer>().materials;
+        lampColors[1] = green;
+        lamp.GetComponent<MeshRenderer>().materials = lampColors;
+        Debug.Log(green);*/
 
         //Initialize numbers for snapzones
         GameObject snap1 = transform.Find("InputSnapZone11").gameObject;
@@ -227,6 +234,9 @@ public class SnapZonePlaceQuiz : MonoBehaviour
         int[] filterValue = input.GetComponent<FilterInput>().getInputValue();
         if (filterValue.SequenceEqual(chosenCube))
 		{
+            Material[] lampColors = lamp.GetComponent<MeshRenderer>().materials;
+            lampColors[1] = green;
+            lamp.GetComponent<MeshRenderer>().materials = lampColors;
             slideDoorScript.OpenDoor();
 		}
 	}
@@ -252,7 +262,11 @@ public class SnapZonePlaceQuiz : MonoBehaviour
         snapZoneValue = v.getInputValue();
         int result = calculateMatrixOutput();
         if (result == expectedResult)
+		{
+            //If other task is complete
             slideDoorScript.OpenDoor();
+        }
+            
 
     }
 
