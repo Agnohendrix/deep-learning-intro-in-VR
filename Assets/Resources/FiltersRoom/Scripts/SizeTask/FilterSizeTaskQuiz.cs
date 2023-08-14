@@ -9,6 +9,9 @@ public class FilterSizeTaskQuiz : MonoBehaviour
     public GameObject door;
     private SlideDoor slideDoorScript;
 
+    public GameObject lamp;
+    public GameObject lampOther;
+
     public Material red;
     public Material green;
     public List<GameObject> outputElements;
@@ -31,7 +34,10 @@ public class FilterSizeTaskQuiz : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        Material[] lampColors = lamp.GetComponent<MeshRenderer>().materials;
+        //Debug.Log("material equals: " + (lampColors[1] == green));
+        lampColors[1] = green;
+        lamp.GetComponent<MeshRenderer>().materials = lampColors;
         //Initialize numbers for cubes
         GameObject cube1 = transform.Find("Interactable.InputFilter1").gameObject;
         GameObject cube2 = transform.Find("Interactable.InputFilter2").gameObject;

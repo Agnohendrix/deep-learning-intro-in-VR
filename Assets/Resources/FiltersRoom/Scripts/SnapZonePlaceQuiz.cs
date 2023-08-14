@@ -229,10 +229,14 @@ public class SnapZonePlaceQuiz : MonoBehaviour
             Debug.Log("material equals: " + (lampColors[1] == green));
             lampColors[1] = green;
             lamp.GetComponent<MeshRenderer>().materials = lampColors;
-            Debug.Log("material equals: " + (lampColors[1] == green));
 
+            Material[] otherLampColors = lamp.GetComponent<MeshRenderer>().materials;
+            Debug.Log("material other: " + otherLampColors[1]);
+            Debug.Log("material equals: " + (otherLampColors[1].name.Contains("green")));
+
+            
             //If other lamp is green open the door
-            if(lampOther.GetComponent<MeshRenderer>().materials[1] == green)
+            if(otherLampColors[1].name.Contains("green"))
                 slideDoorScript.OpenDoor();
 		}
 	}
