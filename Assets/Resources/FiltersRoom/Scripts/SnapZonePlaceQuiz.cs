@@ -151,8 +151,6 @@ public class SnapZonePlaceQuiz : MonoBehaviour
             tot += snapValue[i] * cubeValue[i];
         }
         transform.Find("OutputSnapZone33").Find("Text").GetComponent<TextMeshPro>().SetText(tot.ToString());
-        
-        
     }
 
 
