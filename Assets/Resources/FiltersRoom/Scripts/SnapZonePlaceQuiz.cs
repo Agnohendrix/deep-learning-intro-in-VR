@@ -228,7 +228,7 @@ public class SnapZonePlaceQuiz : MonoBehaviour
             lampColors[1] = green;
             lamp.GetComponent<MeshRenderer>().materials = lampColors;
 
-            Material[] otherLampColors = lamp.GetComponent<MeshRenderer>().materials;
+            Material[] otherLampColors = lampOther.GetComponent<MeshRenderer>().materials;
             Debug.Log("material other: " + otherLampColors[1]);
             Debug.Log("material equals: " + (otherLampColors[1].name.Contains("green")));
 
