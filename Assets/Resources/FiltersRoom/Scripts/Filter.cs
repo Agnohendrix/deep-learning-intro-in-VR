@@ -8,18 +8,12 @@ public class Filter : MonoBehaviour
     public GameObject door;
     private SlideDoor slideDoorScript;
 
-    public Material red;
     public Material green;
-    public List<GameObject> outputElements;
 
-    [SerializeField]
-    private int bias = 3;
-    [SerializeField]
-    private int w1 = -2;
-    [SerializeField]
-    private int w2 = -2;
-    private int x1 = 999;
-    private int x2 = 999;
+    private int padding = 0;
+    private int stride = 3;
+
+    private string[] pos = new string[100];
 
     int expectedResult;
 
@@ -29,17 +23,18 @@ public class Filter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        setFivePositions();
         
         //Initialize numbers for snapzones
-        GameObject snap1 = transform.Find("InputSnapZone11").gameObject;
-        GameObject snap2 = transform.Find("InputSnapZone12").gameObject;
-        GameObject snap3 = transform.Find("InputSnapZone13").gameObject;
-        GameObject snap4 = transform.Find("InputSnapZone21").gameObject;
-        GameObject snap5 = transform.Find("InputSnapZone22").gameObject;
-        GameObject snap6 = transform.Find("InputSnapZone23").gameObject;
-        GameObject snap7 = transform.Find("InputSnapZone31").gameObject;
-        GameObject snap8 = transform.Find("InputSnapZone32").gameObject;
-        GameObject snap9 = transform.Find("InputSnapZone33").gameObject;
+        GameObject snap1 = transform.Find("Matrix3x311").gameObject;
+        GameObject snap2 = transform.Find("Matrix3x312").gameObject;
+        GameObject snap3 = transform.Find("Matrix3x313").gameObject;
+        GameObject snap4 = transform.Find("Matrix3x321").gameObject;
+        GameObject snap5 = transform.Find("Matrix3x322").gameObject;
+        GameObject snap6 = transform.Find("Matrix3x323").gameObject;
+        GameObject snap7 = transform.Find("Matrix3x331").gameObject;
+        GameObject snap8 = transform.Find("Matrix3x332").gameObject;
+        GameObject snap9 = transform.Find("Matrix3x333").gameObject;
         setRandomValues3x3(snap1, "snapzone");
         setRandomValues3x3(snap2, "snapzone");
         setRandomValues3x3(snap3, "snapzone");
@@ -106,18 +101,6 @@ public class Filter : MonoBehaviour
                 snapValue = snap9.GetComponent<SnapZoneInput3x3>().getInputValue();
                 break;
         }
-
-        int tot = 0;
-        for (int i = 0; i < 9; i++)
-        {
-            tot += snapValue[i] * cubeValue[i];
-        }
-        Debug.Log("operation value: " + tot);
-        expectedResult = tot;
-
-        //Sets text on board
-        this.transform.Find("Info board small").Find("Canvas").Find("Panel").Find("Text").GetComponent<TextMeshProUGUI>().SetText("The requested output value is " + tot);
-
     }
 
 
@@ -214,8 +197,6 @@ public class Filter : MonoBehaviour
     public void input1Snapped(GameObject input)
     {
         Debug.Log("snapped");
-        //x1 = input.GetComponent<FilterInput>().getInputValue();
-        x1 = 1;
         cubeValue = input.GetComponent<FilterInput>().getInputValue();
         Debug.Log("snapped object " + this.name + " " + string.Join(" ", cubeValue));
 
@@ -238,17 +219,14 @@ public class Filter : MonoBehaviour
 
     public void input1UnSnapped()
     {
-        x1 = 999;
     }
 
     public void input2Snapped(GameObject input)
     {
-        x2 = input.GetComponent<NNInput>().getInputValue();
     }
 
     public void input2UnSnapped()
     {
-        x2 = 999;
     }
 
     private int calculateMatrixOutput()
@@ -261,16 +239,28 @@ public class Filter : MonoBehaviour
         Debug.Log("operation value: " + tot);
         return tot;
 	}
+    
+    private void setFivePositions()
+	{
+        if(padding == 0)
+		{
+            int rowValue = 1;
+            int colValue = 1;
+            int counter = 1;
+            //pos[counter] = rowValue.ToString() + colValue.ToString();
+            //counter++;
+            for(int i = rowValue; i + 3 <= 10; i+= stride)
+			{
+                for(int j = colValue; j + 3 <= 10; j += stride)
+				{
 
-    private int calculateOutput()
-    {
-        if ((w1 * x1) + (w2 * x2) + bias > 0)
-        {
-            return 1;
+                        pos[counter] = i.ToString() + j.ToString();
+                        counter++;
+                     
+				}
+			}
+            Debug.Log("zones " + string.Join(" ", pos));
+
         }
-        else
-        {
-            return 0;
-        }
-    }
+	}
 }
