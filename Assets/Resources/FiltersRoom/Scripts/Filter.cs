@@ -17,7 +17,7 @@ public class Filter : MonoBehaviour
 
     private GameObject lastSnapped;
 
-    private bool[] correct = { false, false, false, false, false, false };
+    private bool[] correct = { true, false, false, false, false, false };
 
     int expectedResult;
 
@@ -185,11 +185,9 @@ public class Filter : MonoBehaviour
     public void input1Snapped(GameObject input)
     {
         lastSnapped = input;
-        //I have input on name on this object (Interactable1-2-3-ecc) so I can use that and store in NNInput correct zone,
-        //Then check if pos[InteractableN] corresponds to NNInput
-        Debug.Log("snapped");
+
         cubeValue = input.GetComponent<FilterInput>().getInputValue();
-        Debug.Log("snapped object " + input.name + " " + string.Join(" ", cubeValue));
+        //Debug.Log("snapped object " + input.name + " " + string.Join(" ", cubeValue));
 
     }
 
@@ -215,8 +213,11 @@ public class Filter : MonoBehaviour
 
     }
 
-    public void input1UnSnapped()
+    public void input1UnSnapped(GameObject cube)
     {
+        Debug.Log(cube.name);
+        correct[int.Parse(cube.name.Substring(cube.name.Length - 1))] = false;
+        Debug.Log("correct array " + string.Join(" ", correct));
     }
 
     public void input2Snapped(GameObject input)
