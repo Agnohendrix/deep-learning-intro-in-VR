@@ -208,7 +208,15 @@ public class Filter : MonoBehaviour
         Debug.Log("this " + string.Join(" ", v.getInputValue()));
         snapZoneValue = v.getInputValue();
         int result = calculateMatrixOutput();
-        if(result == expectedResult)
+        bool allCorrect = true;
+
+        foreach(bool c in correct)
+        {
+            if (!c)
+                allCorrect = false;
+        }
+
+        if(allCorrect)
             slideDoorScript.OpenDoor();
 
     }
