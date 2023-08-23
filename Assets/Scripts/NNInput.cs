@@ -10,4 +10,9 @@ public class NNInput : MonoBehaviour
     {
         return inputValue;
     }
+
+    public void setInputValue(int n)
+	{
+        this.inputValue = n;
+	}
 }

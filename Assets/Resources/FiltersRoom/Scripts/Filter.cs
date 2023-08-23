@@ -15,6 +15,10 @@ public class Filter : MonoBehaviour
 
     private string[] pos = new string[100];
 
+    private GameObject lastSnapped;
+
+    private bool[] correct = { false, false, false, false, false, false };
+
     int expectedResult;
 
     private int[] snapZoneValue;
@@ -24,7 +28,8 @@ public class Filter : MonoBehaviour
     void Start()
     {
         setFivePositions();
-        
+        Debug.Log("stride " + stride);
+        Debug.Log("zones " + string.Join(" ", pos));
         //Initialize numbers for snapzones
         GameObject snap1 = transform.Find("Matrix3x311").gameObject;
         GameObject snap2 = transform.Find("Matrix3x312").gameObject;
@@ -49,12 +54,18 @@ public class Filter : MonoBehaviour
         GameObject cube1 = transform.Find("Interactable.InputFilter1").gameObject;
         GameObject cube2 = transform.Find("Interactable.InputFilter2").gameObject;
         GameObject cube3 = transform.Find("Interactable.InputFilter3").gameObject;
-        setRandomValues3x3(cube1, "cube");
-        setRandomValues3x3(cube2, "cube");
-        setRandomValues3x3(cube3, "cube");
+        GameObject cube4 = transform.Find("Interactable.InputFilter4").gameObject;
+        GameObject cube5 = transform.Find("Interactable.InputFilter5").gameObject;
 
-        slideDoorScript = door.GetComponent<SlideDoor>();
+        cube1.GetComponent<NNInput>().setInputValue(int.Parse(pos[1]));
+        cube2.GetComponent<NNInput>().setInputValue(int.Parse(pos[2]));
+        cube3.GetComponent<NNInput>().setInputValue(int.Parse(pos[3]));
+        cube4.GetComponent<NNInput>().setInputValue(int.Parse(pos[4]));
+        cube5.GetComponent<NNInput>().setInputValue(int.Parse(pos[5]));
+
         
+        //slideDoorScript = door.GetComponent<SlideDoor>();
+
         //Randomizes correct objects to open the door
         int[] cubeValue = { };
         int[] snapValue = { };
@@ -102,7 +113,6 @@ public class Filter : MonoBehaviour
                 break;
         }
     }
-
 
     //Sets random values for matrix snapzones and cubes
     void setRandomValues3x3(GameObject obj, string type)
@@ -164,46 +174,34 @@ public class Filter : MonoBehaviour
             }
             obj.GetComponent<SnapZoneInput3x3>().setInputValueSetFromEditor(editorValue);
             obj.transform.Find("Text").GetComponent<TextMeshPro>().SetText(textMeshValue);
-
         }
 	}
-
 
     // Update is called once per frame
     void Update()
     {
-        //should probably not do this in this loop
-        /*
-        if (calculateOutput() == 1 && previousOutput == 0)
-        {
-            slideDoorScript.OpenDoor();
-            foreach (GameObject o in outputElements)
-            {
-                o.GetComponent<Renderer>().material = green;
-            }
-            previousOutput = 1;
-        }
-        else if (calculateOutput() == 0 && previousOutput == 1)
-        {
-            slideDoorScript.CloseDoor();
-            foreach (GameObject o in outputElements)
-            {
-                o.GetComponent<Renderer>().material = red;
-            }
-            previousOutput = 0;
-        }*/
     }
 
     public void input1Snapped(GameObject input)
     {
+        lastSnapped = input;
+        //I have input on name on this object (Interactable1-2-3-ecc) so I can use that and store in NNInput correct zone,
+        //Then check if pos[InteractableN] corresponds to NNInput
         Debug.Log("snapped");
         cubeValue = input.GetComponent<FilterInput>().getInputValue();
-        Debug.Log("snapped object " + this.name + " " + string.Join(" ", cubeValue));
+        Debug.Log("snapped object " + input.name + " " + string.Join(" ", cubeValue));
 
     }
 
     public void snapZoneSnapped(string value)
 	{
+        Debug.Log(lastSnapped.GetComponent<NNInput>().getInputValue() + " cube in snap method " + lastSnapped.name.Substring(lastSnapped.name.Length - 1));
+        Debug.Log(value.Substring(value.Length - 2) + " snapzone in snap method");
+        if (lastSnapped.GetComponent<NNInput>().getInputValue().ToString() == value.Substring(value.Length - 2))
+		{
+            correct[int.Parse(lastSnapped.name.Substring(lastSnapped.name.Length - 1))] = true;
+		}
+        Debug.Log("correct array " + string.Join(" ", correct));
         Debug.Log("snapzone");
         Debug.Log("snapzone object " + value);
         Debug.Log(this.transform.parent.name);
@@ -259,8 +257,6 @@ public class Filter : MonoBehaviour
                      
 				}
 			}
-            Debug.Log("zones " + string.Join(" ", pos));
-
         }
 	}
 }
