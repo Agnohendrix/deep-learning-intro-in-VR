@@ -27,6 +27,9 @@ public class Filter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        slideDoorScript = door.GetComponent<SlideDoor>();
+        slideDoorScript.OpenDoor();
+
         setFivePositions();
         Debug.Log("stride " + stride);
         Debug.Log("zones " + string.Join(" ", pos));
@@ -215,8 +218,9 @@ public class Filter : MonoBehaviour
             if (!c)
                 allCorrect = false;
         }
+        Debug.Log("allCorrect " + allCorrect + " correct array " + string.Join(" ", correct));
 
-        if(allCorrect)
+        if (allCorrect)
             slideDoorScript.OpenDoor();
 
     }
