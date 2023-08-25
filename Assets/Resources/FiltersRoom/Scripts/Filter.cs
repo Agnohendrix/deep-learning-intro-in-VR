@@ -8,6 +8,9 @@ public class Filter : MonoBehaviour
     public GameObject door;
     private SlideDoor slideDoorScript;
 
+    [SerializeField]
+    private GameObject stridePaddingPanel;
+
     public Material green;
 
     private int padding = 0;
@@ -28,10 +31,14 @@ public class Filter : MonoBehaviour
     void Start()
     {
         slideDoorScript = door.GetComponent<SlideDoor>();
-        slideDoorScript.OpenDoor();
 
+        stride = Random.Range(1, 4);
+        padding = Random.Range(0, 2);
+
+        stridePaddingPanel.GetComponent<TextMeshProUGUI>().SetText("Place the cubes on the input matrix in the correct position knowing that convolution is made with Stride = " + stride + " and Padding = " + padding);
         setFivePositions();
         Debug.Log("stride " + stride);
+        Debug.Log("padding " + padding);
         Debug.Log("zones " + string.Join(" ", pos));
         //Initialize numbers for snapzones
         GameObject snap1 = transform.Find("Matrix3x311").gameObject;
@@ -66,8 +73,6 @@ public class Filter : MonoBehaviour
         cube4.GetComponent<NNInput>().setInputValue(int.Parse(pos[4]));
         cube5.GetComponent<NNInput>().setInputValue(int.Parse(pos[5]));
 
-        
-        //slideDoorScript = door.GetComponent<SlideDoor>();
 
         //Randomizes correct objects to open the door
         int[] cubeValue = { };
@@ -180,11 +185,6 @@ public class Filter : MonoBehaviour
         }
 	}
 
-    // Update is called once per frame
-    void Update()
-    {
-    }
-
     public void input1Snapped(GameObject input)
     {
         lastSnapped = input;
@@ -198,7 +198,7 @@ public class Filter : MonoBehaviour
 	{
         Debug.Log(lastSnapped.GetComponent<NNInput>().getInputValue() + " cube in snap method " + lastSnapped.name.Substring(lastSnapped.name.Length - 1));
         Debug.Log(value.Substring(value.Length - 2) + " snapzone in snap method");
-        if (lastSnapped.GetComponent<NNInput>().getInputValue().ToString() == value.Substring(value.Length - 2))
+        if (lastSnapped.GetComponent<NNInput>().getInputValue().ToString("D2") == value.Substring(value.Length - 2))
 		{
             correct[int.Parse(lastSnapped.name.Substring(lastSnapped.name.Length - 1))] = true;
 		}
@@ -253,23 +253,31 @@ public class Filter : MonoBehaviour
     
     private void setFivePositions()
 	{
-        if(padding == 0)
+        int rowValue;
+        int colValue;
+        int max;
+        if (padding == 0)
+        {
+            max = 10;
+            rowValue = 1;
+            colValue = 1;
+        } else 
 		{
-            int rowValue = 1;
-            int colValue = 1;
-            int counter = 1;
-            //pos[counter] = rowValue.ToString() + colValue.ToString();
-            //counter++;
-            for(int i = rowValue; i + 3 <= 10; i+= stride)
+            max = 11;
+            rowValue = 0;
+            colValue = 0;
+		}
+        
+        int counter = 1;
+        //pos[counter] = rowValue.ToString() + colValue.ToString();
+        //counter++;
+        for (int i = rowValue; i + 3 <= max; i+= stride)
+		{
+            for(int j = colValue; j + 3 <= max; j += stride)
 			{
-                for(int j = colValue; j + 3 <= 10; j += stride)
-				{
-
-                        pos[counter] = i.ToString() + j.ToString();
-                        counter++;
-                     
-				}
+                pos[counter] = i.ToString() + j.ToString();
+                counter++;        
 			}
-        }
+		}
 	}
 }
